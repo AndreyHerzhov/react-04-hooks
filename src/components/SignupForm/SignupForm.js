@@ -1,10 +1,10 @@
-import  {useState} from "react";
 import styles from './SignupForm.module.css'
+import useLocalStorage from "components/hooks/useLocalStorage";
 
 
 export default function SignupForm() {
-    const [email, setEmail] = useState('')
-    const [password, setPasswrod] = useState('')
+    const [email, setEmail] = useLocalStorage('email', '')
+    const [password, setPasswrod] = useLocalStorage('password', '')
  
 
     const handleChange = event => {
@@ -24,32 +24,32 @@ export default function SignupForm() {
                     return;
         }
     }
-    
 
+ 
     return (
-                  <form className={styles.form} autoComplete="off">
-                    <label className={styles.label}>
-                      <span>Почта</span>
-                      <input
-                        type="email"
-                        name="email"
-                        onChange={handleChange}
-                        value={email}
-                      />
-                    </label>
-                    <label className={styles.label}>
-                        <span>Пароль</span>
-                        <input
-                        type="password"
-                        name="password"
-                        onChange={handleChange}
-                        value={password}
-                    />
-                    </label>
-            
-                    <button type="submit">Зарегистрироваться</button>
-                  </form>
-                );
+            <form className={styles.form} autoComplete="off">
+              <label className={styles.label}>
+                <span>Почта</span>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  value={email}
+                />
+              </label>
+              <label className={styles.label}>
+                  <span>Пароль</span>
+                  <input
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  value={password}
+              />
+              </label>
+      
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+          )
 }
 
  

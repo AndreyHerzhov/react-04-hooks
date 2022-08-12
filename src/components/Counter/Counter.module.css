@@ -1,0 +1,8 @@
+.btn {
+    display: inline-flex;
+    
+    height: 30px;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+  }

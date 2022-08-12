@@ -10,7 +10,7 @@ import React, {Component} from "react";
 import shortid from "shortid";
 // import Modal from './Modal/Modal'
 // import Tabs from "./Tabs/Tabs";
-// import Clock from "./Clock";
+import Clock from "./Clock";
 import Container from "./Container";
 // import IconButton from "./IconButton";
 // import { ReactComponent as AddIcon} from "../icons/add.svg"
@@ -20,7 +20,7 @@ import Container from "./Container";
 // import { Reader } from './Reader/Reader.jsx'
 // import publication from '../publications.json'
 // import { Example1 } from './Example1.jsx';
-import   SignupForm   from "./SignupForm/SignupForm";
+// import   SignupForm   from "./SignupForm/SignupForm";
 // import './index.css';
 // import publications from './publications.json';
  
@@ -165,7 +165,10 @@ class App extends Component {
      return (
         <Container>
 
-          <SignupForm/>
+          <Clock/>
+        
+
+          {/* <SignupForm/> */}
           
 
           {/* <Reader items={publication} /> */}
@@ -194,9 +197,9 @@ class App extends Component {
  
           {/* <input type="text" value={this.state.inputValue} onChange={this.handleInputChange}/> */}
           
-          {/* <Counter initialValue={0}/>
-          <Dropdown/>
-          <ColorPicker options={colorPickerOptions}/> */}
+          {/* <Counter initialValue={0}/> */}
+          {/* <Dropdown/> */}
+          {/* <ColorPicker options={colorPickerOptions}/> */}
 
          
 
