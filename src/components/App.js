@@ -10,7 +10,7 @@ import React, {Component} from "react";
 import shortid from "shortid";
 // import Modal from './Modal/Modal'
 // import Tabs from "./Tabs/Tabs";
-import Clock from "./Clock";
+// import Clock from "./Clock";
 import Container from "./Container";
 // import IconButton from "./IconButton";
 // import { ReactComponent as AddIcon} from "../icons/add.svg"
@@ -23,7 +23,8 @@ import Container from "./Container";
 // import   SignupForm   from "./SignupForm/SignupForm";
 // import './index.css';
 // import publications from './publications.json';
- 
+import   Clicker   from "./UseEfect/UseEffect";
+import PokemonView from "views/PokemonView"; 
 
 
 // const colorPickerOptions = [
@@ -165,8 +166,8 @@ class App extends Component {
      return (
         <Container>
 
-          <Clock/>
-        
+          {/* <Clock/> */}
+        <Clicker/>
 
           {/* <SignupForm/> */}
           
@@ -204,7 +205,7 @@ class App extends Component {
          
 
 
-          
+          <PokemonView/>
 
           {/* <div>
             <p>Общее кол-во: {todos.length}</p>
