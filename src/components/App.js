@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import Counter from "./Counter";
+import Counter from "./Counter";
 // import Dropdown from "./Dropdown"
 // import ColorPicker from "./ColorPicker"
 // import TodoList from "./TodoList";
@@ -24,7 +24,7 @@ import Container from "./Container";
 // import './index.css';
 // import publications from './publications.json';
 import   Clicker   from "./UseEfect/UseEffect";
-import PokemonView from "views/PokemonView"; 
+// import PokemonView from "views/PokemonView"; 
 
 
 // const colorPickerOptions = [
@@ -164,7 +164,8 @@ class App extends Component {
 
 
      return (
-        <Container>
+      <>
+          {/* <Container> */}
 
           {/* <Clock/> */}
         <Clicker/>
@@ -198,14 +199,14 @@ class App extends Component {
  
           {/* <input type="text" value={this.state.inputValue} onChange={this.handleInputChange}/> */}
           
-          {/* <Counter initialValue={0}/> */}
+          // <Counter initialValue={0}/>
           {/* <Dropdown/> */}
           {/* <ColorPicker options={colorPickerOptions}/> */}
 
          
 
 
-          <PokemonView/>
+          {/* <PokemonView/> */}
 
           {/* <div>
             <p>Общее кол-во: {todos.length}</p>
@@ -217,7 +218,8 @@ class App extends Component {
             todos={visibleTodos} 
             onDeleteTodo={this.deleteTodo}
             onToggleCompleted={this.toggleCompleted}/> */}
-      </Container>
+     {/* </Container> */}
+      </>
     );
   }
 }

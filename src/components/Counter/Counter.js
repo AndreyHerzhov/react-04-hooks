@@ -1,40 +1,51 @@
-import { useState, useEffect } from 'react';
+import { useReducer } from 'react';
+ 
+ 
+ 
 import styles from './Counter.module.css';
+
+function countReducer (state, actions) {
+  switch(actions.type){
+    case 'increment':
+      return {...state, count: state.count + actions.payload}
+
+    case 'decrement':
+      return {...state, count: state.count - actions.payload}
+      
+      default:
+        return state;
+  }
+}
 
 
 export default function Counter () {
-    const [counterA, setCounterA] = useState(0)
-    const [counterB, setCounterB] = useState(0)
+    // const [counterA, setCounterA] = useState(0)
+    // const [counterB, setCounterB] = useState(0)
 
-    const handleCounterAIncrement = () => {
-        setCounterA(s => s + 1)
-    }
+    const [state, dispatch] = useReducer(countReducer, {count: 0})
+ 
 
-    const handleCounterBIncrement = () => {
-        setCounterB(s => s - 1)
-    }
-
-    useEffect(() => {
-        const totalClicks = counterA + counterB
-        document.title = `Total clicks ${totalClicks}`
-    }, [counterA, counterB])
+    // useEffect(() => {
+    //     const totalClicks = counterA + counterB
+    //     document.title = `Total clicks ${totalClicks}`
+    // }, [counterA, counterB])
 
     return (
         <>
           <button
             className={styles.btn}
             type="button"
-            onClick={handleCounterAIncrement}
+            onClick={() => dispatch({type: 'increment', payload: 1})}
           >
-            Кликнули counterA {counterA} раз
+           Increase 
           </button>
-    
+        <span>{state.count} </span>
           <button
             className={styles.btn}
             type="button"
-            onClick={handleCounterBIncrement}
+            onClick={() => dispatch({type: 'decrement', payload: 1})}
           >
-            Кликнули counterB {counterB} раз
+            Decrease    
           </button>
         </>
       );
