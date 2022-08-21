@@ -17,12 +17,19 @@ function countReducer (state, actions) {
   }
 }
 
+function init(initialState) {
+  return {
+    ...initialState,
+    count: initialState.count + 100
+  }
+}
+
 
 export default function Counter () {
     // const [counterA, setCounterA] = useState(0)
     // const [counterB, setCounterB] = useState(0)
 
-    const [state, dispatch] = useReducer(countReducer, {count: 0})
+    const [state, dispatch] = useReducer(countReducer, {count: 0}, init)
  
 
     // useEffect(() => {

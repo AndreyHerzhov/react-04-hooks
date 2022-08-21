@@ -11,7 +11,7 @@ import shortid from "shortid";
 // import Modal from './Modal/Modal'
 // import Tabs from "./Tabs/Tabs";
 // import Clock from "./Clock";
-import Container from "./Container";
+// import Container from "./Container";
 // import IconButton from "./IconButton";
 // import { ReactComponent as AddIcon} from "../icons/add.svg"
 // import tabs from './tabs.json';
@@ -199,7 +199,7 @@ class App extends Component {
  
           {/* <input type="text" value={this.state.inputValue} onChange={this.handleInputChange}/> */}
           
-          // <Counter initialValue={0}/>
+          <Counter initialValue={0}/>
           {/* <Dropdown/> */}
           {/* <ColorPicker options={colorPickerOptions}/> */}
 
